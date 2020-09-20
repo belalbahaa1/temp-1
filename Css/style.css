@@ -1,0 +1,216 @@
+/* 
+    1- Common Styles
+    2- General Styles
+    3- Sections
+        3.0- Header Section
+        3.1- Home Section
+        3.2- About Section
+        3.3- Portoflio Section
+        3.4- Service Section
+        3.5- Prices Section
+        3.6- Team Section
+        3.7- Contact Section
+        3.9 -Footer Section
+*/
+
+/* 1- common */
+/* 
+    -container
+    -overlay
+    -opacity hover
+    -section header 
+    -section padding
+    -hover effect 1 (left to right )
+    -hover effect 2 (top to bottom )
+    */
+/* 2- General Css */
+
+:root {
+  --maincolor: #6195ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Varela Round", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: montserrat, sans-serif;
+}
+button {
+  font-family: inherit;
+}
+/* container */
+.container {
+  width: 80%;
+  margin: auto;
+}
+/* overlay effect   */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hover-opacity {
+  transition: opacity 0.4s;
+}
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+/* left  to right effect */
+.ltr-effect {
+  position: relative;
+}
+.ltr-effect:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #333;
+  top: 0;
+  left: 0;
+  transition: width 0.5s;
+  z-index: -1;
+}
+.ltr-effect:hover:after {
+  width: 100%;
+}
+/* top  to bottom effect */
+.tb-effect {
+  position: relative;
+}
+.tb-effect:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background: #333;
+  top: 0;
+  left: 0;
+  transition: height 0.5s;
+  z-index: -1;
+}
+.tb-effect:hover:after {
+  height: 100%;
+}
+
+/* 3- Section Styles */
+
+.pd-y {
+  padding: 120px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section-header .section-title {
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.section-header .line {
+  display: block;
+  height: 5px;
+  width: 60px;
+  background-color: var(--maincolor);
+  margin: 0 auto 70px auto;
+}
+/* 3.0- Header */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+.clear {
+  clear: both;
+}
+.header .logo {
+  width: 40%;
+  float: left;
+  padding-top: 9px;
+}
+.header .logo img {
+  width: 15%;
+  cursor: pointer;
+}
+.header .nav {
+  width: 60%;
+  float: left;
+  list-style: none;
+  text-align: right;
+}
+.header .nav > li {
+  display: inline-block;
+  padding: 20px;
+}
+.header .nav > li > a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+.header .nav > li > a.active:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--maincolor);
+  transition: 0.4s;
+}
+.header .nav > li > a.active:hover:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: var(--maincolor);
+  transition: 0.4s;
+}
+
+.header .nav > li > a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: var(--maincolor);
+  transition: 0.5s;
+}
+.header .nav > li > a:hover:after {
+  width: 100%;
+}
+
+.dropDown {
+  position: relative;
+}
+.dropDown-menu {
+  position: absolute;
+  background-color: var(--maincolor);
+  width: 150px;
+  text-align: center;
+  left: -50%;
+  top: 70%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s, visibility 0.6s;
+}
+.dropDown-menu a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+.dropDown:hover .dropDown-menu {
+  opacity: 1;
+  visibility: visible;
+}

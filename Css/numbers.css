@@ -1,0 +1,33 @@
+:root {
+  --maincolor: #6195ff;
+}
+/* numbers Section */
+.numbers {
+  position: relative;
+  background-image: url(../images/images/background/background2.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+}
+.numbers-item {
+  overflow: hidden;
+}
+.number-item {
+  padding: 100px 0;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.number-item .icon {
+  color: var(--maincolor);
+  margin-bottom: 15px;
+}
+.number-item-title {
+  font-weight: bold;
+  color: #fff;
+  font-size: 30px;
+}
+.number-item-text {
+  color: #fff;
+  text-transform: capitalize;
+}

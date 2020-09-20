@@ -1,0 +1,47 @@
+:root {
+  --maincolor: #6195ff;
+}
+/* Home Section */
+.home {
+  height: 100vh;
+  background-image: url(../images/images/background/background1.webp);
+  background-size: cover;
+  position: relative;
+}
+.home-content {
+  width: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.home .title {
+  color: #fff;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.home-para {
+  margin: 20px 0;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+.home .btn {
+  background: none;
+  border: none;
+  outline: none;
+  min-width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 0 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.home .btn-start {
+  background: #fff;
+}
+.home .btn-learn {
+  background: var(--maincolor);
+  color: #fff;
+}

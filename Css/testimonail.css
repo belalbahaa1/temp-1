@@ -1,0 +1,45 @@
+:root {
+  --maincolor: #6195ff;
+}
+/* testimonail Section */
+.test {
+  position: relative;
+  background-image: url(../images/images/background/background3.webp);
+  height: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.test-content {
+  overflow: hidden;
+  padding: 120px 0;
+  width: 80%;
+  margin: auto;
+}
+.test-item {
+  width: 50%;
+  float: left;
+  color: #fff;
+}
+.test-item .test-toplayer {
+  padding: 16px 2px 40px 100px;
+  position: relative;
+}
+.test-item .test-toplayer img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+}
+.test-item .test-toplayer h2 {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.test-item .test-toplayer span {
+  color: var(--maincolor);
+  text-transform: capitalize;
+}
+.test-desc {
+  line-height: 1.5;
+  font-size: 17px;
+  width: 76%;
+}
